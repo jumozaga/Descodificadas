@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #333; /* Cor do texto */
+    background-color: #ffdb58;
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    background-color: #ff9900; /* Cor de destaque do menu */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff; 
+    font-weight: bold;
+}
+
+section {
+    background-color: #ffcc5c; 
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efeito de sombra */
+}
+
+h1, h2 {
+    color: #593806; 
+}
+
+
+#carousel-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#carousel {
+    display: flex;
+    transition: transform 0.5s;
+}
+
+#carousel img {
+    width: 100%;
+    height: auto;
+}
+
+#prev, #next {
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgb(27, 15, 1);
+    color: white;
+    border-radius: 5px;
+    margin: 10px; /* Margem para centralizar os botões */
+    display: inline-block; /* Para centralizar os botões */
+}
+
+#prev:hover, #next:hover {
+    background-color: #ff9900; /* Cor de destaque ao passar o mouse */
+}
+
+#characters-list {
+    list-style: none; /* Remove os pontos das <li> */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribui os elementos igualmente */
+}
+
+#characters-list li {
+    flex: 1; /* Expande para preencher a largura disponível */
+    max-width: 45%; /* Limita a largura máxima para evitar sobreposição em telas pequenas */
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#characters-list img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+}
+
+#apresentacao img{
+    max-width: 100%;
+    height: auto;
+    margin-right: 0;
+
+}
