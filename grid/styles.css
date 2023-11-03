@@ -1,0 +1,32 @@
+body{
+    margin: 50px;
+    background-color: #456;
+    color: rgb(239, 235, 241);
+}
+
+.grid-container {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  grid-gap: 20px;
+
+
+}
+
+.grid-item {
+
+  width: 100%;
+
+}
+
+.grid-item img {
+
+  width: 100%;
+
+}
+
+h1{
+    text-align: center;
+}
