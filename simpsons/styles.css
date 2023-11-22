@@ -1,0 +1,218 @@
+/* Estilos para o carrossel */
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+/* Estilos para o grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+/* Efeito de aumento de tamanho das imagens */
+.imagem-descricao img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.imagem-descricao img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #FEDD00;
+    padding: 10px;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+/* Estilos do destaque */
+#destaque {
+    background-color: #FEDD00;
+    text-align: center;
+    padding: 50px 0;
+    color: #000;
+}
+
+#destaque h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Estilos do texto colorido */
+#texto-colorido {
+    background-color: #FF6600;
+    padding: 20px;
+    color: #FFF;
+}
+
+#texto-colorido h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Estilos dos botões */
+#botoes {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.botao-interno,
+.botao-externo {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #FFF;
+    text-decoration: none;
+    background-color: #FF6600;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* Estilos das imagens e descrições */
+.imagem-descricao {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.imagem-descricao img {
+    max-width: 100%;
+}
+
+.imagem-descricao h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.imagem-descricao p {
+    font-size: 14px;
+}
+
+/* Estilos do vídeo */
+#video {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#video h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#video iframe {
+    max-width: 100%;
+    height: 400px;
+}
+
+/* Estilos do mapa */
+#mapa {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#mapa h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.mapa-embed {
+    max-width: 100%;
+    height: 400px;
+    background-color: #FEDD00;
+}
+
+/* Estilos do formulário */
+#formulario {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#formulario h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Estilos do carrossel */
+#carrossel {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#carrossel h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel img {
+    max-width: 100%;
+    max-height: 200px;
+    margin: 0 10px;
+}
+
+/* Estilos do grid */
+#grid {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#grid h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.grid-item img {
+    max-width: 100%;
+    max-height: 200px;
+}
