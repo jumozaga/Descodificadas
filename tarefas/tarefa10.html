@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cálculo da Média</title>
+    <script src="https://kit.fontawesome.com/506a039e28.js" crossorigin="anonymous"></script>
+    <script>
+        function calcularMedia() {
+            // Obter os valores dos inputs
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var num3 = parseFloat(document.getElementById("num3").value);
+            var num4 = parseFloat(document.getElementById("num4").value);
+            var num5 = parseFloat(document.getElementById("num5").value);
+
+            // Calcular a média aritmética
+            var media = (num1 + num2 + num3 + num4 + num5) / 5;
+
+            // Exibir o resultado
+            document.getElementById("resultado").innerHTML = "A média é: " + media;
+        }
+    </script>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #080118;
+            color:aliceblue;
+            text-align: center;
+            display: flex;
+            flex-direction: column;        
+            width: 100%;
+         
+        }
+        button, input{           
+            width: 200px;   
+            align-self: center;     
+         
+        }
+        button{
+            background-color:rgba(255, 228, 196, 0.082);
+            color: rgb(189, 192, 189);
+            margin-bottom: 50px;
+            gap: 40px;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: rgba(255, 228, 196, 0.082);
+            color: rgb(189, 192, 189);
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         
+        }
+        
+    </style>
+    <h1>Cálculo da Média</h1>
+    <label for="num1">1º Bimestre:</label>
+    <input type="number" id="num1" required><br>
+    <label for="num2">2º Bimestre:</label>
+    <input type="number" id="num2" required><br>
+    <label for="num3">3º Bimestre:</label>
+    <input type="number" id="num3" required><br>
+    <label for="num4">4º Bimestre:</label>
+    <input type="number" id="num4" required><br>
+    <label for="num5">Recuperação:</label>
+    <input type="number" id="num5" required><br>
+    <button onclick="calcularMedia()">Calcular Média</button>
+    <div id="resultado"></div>
+
+
+<footer>
+    Programa Descodificadas - Turma 2 @2023.2 - Feito por:
+    <a href="https://github.com/jumozaga">  <i class="fa fa-github"></i> Juliana</a>
+
+</footer>
+
+</body>
+</html>
