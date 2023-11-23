@@ -1,3 +1,168 @@
+:root {
+    --amarelo:rgb(235,208,67);
+    --amarelo-escuro: rgb(255,221,47);
+    --azul: rgb(25,144,252);
+    --abobora: rgb(241,100,50);
+    --claro:rgb(243, 242, 234);
+    --branco: rgb(255,255,255);
+    
+}
+@font-face {
+    font-family: 'Opendislexy-MonoBold';
+    src:        
+        
+        url('./acessibilidades/OpenDyslexicMono-Regular.otf') format('opentype');
+        
+    }
+.openregular{
+    font-family: 'Opendislexy-MonoBold';    
+}
+span{
+    font-family: 'Vina Sans', sans-serif;
+    font-size: 44px;
+    text-align: center;
+
+}
+#dislexia {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    white-space: normal;
+    width: 10%; 
+    text-align: center;
+    border-radius: 10%;
+    border-color: var(--claro);
+    background-color: var(--azul);
+    color: var(--branco);
+    font-family: 'Opendislexy-Bold'; 
+    font-size: 6;
+}
+
+/* Estilos gerais */
+body {
+    font-family:'Vina, Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+/* Estilos do cabeçalho */
+menu{
+    background-color: var(--amarelo-escuro);
+}
+header{
+    background-color: var(--amarelo-escuro);
+    padding: 10px;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+nav ul li a:hover{
+    color: var(--azul);
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.menu {
+    position: static;
+    bottom: 1;
+    width: 100%;
+    height: 52px;  
+  }
+  
+  
+#menu-toggle:checked ~ .menu-items {
+    display: block;
+  
+  }
+  
+.menu-icon {
+display: block;
+float: left;
+font-size: 24px;
+line-height: 60px;
+padding: 0 20px;
+cursor: pointer;
+}
+
+.menu-items {
+position: fixed;
+top: 0;
+left: -100%;
+width: 250px;
+height: 100%;  
+background-image: url('assets/menu.jpeg');
+background-size: contain;
+transition: left 0.3s ease;
+}
+
+.menu-items ul {
+list-style: none;
+margin: 0;
+padding: 20px;
+}
+
+.menu-items ul li {
+margin-bottom: 10px;
+}
+
+.menu-items ul li a {
+text-decoration: none;
+}
+#menu-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#menu-toggle:checked ~ .menu-items {
+left: 0px;
+}
+
+.menu-bar ul{
+list-style: none;
+padding: 0;
+display: flex;
+float: right;
+}
+
+.menu-bar li {
+margin: 0 20px;
+
+}
+
+.menu-bar a{
+text-decoration: none;
+}
+/* img{
+    mix-blend-mode: multiply;
+} */
+
 /* Estilos para o carrossel */
 .carousel {
     display: flex;
@@ -18,6 +183,7 @@
     grid-gap: 20px;
 }
 
+
 /* Efeito de aumento de tamanho das imagens */
 .imagem-descricao img {
     transition: transform 0.3s ease-in-out;
@@ -27,49 +193,10 @@
     transform: scale(1.1);
 }
 
-/* Estilos gerais */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Estilos do cabeçalho */
-header {
-    background-color: #FEDD00;
-    padding: 10px;
-}
-
-.logo img {
-    max-width: 150px;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-nav ul li a {
-    color: #000;
-    text-decoration: none;
-    padding: 5px 10px;
-}
 
 /* Estilos do destaque */
 #destaque {
-    background-color: #FEDD00;
+    background-color:var(--amarelo-escuro);
     text-align: center;
     padding: 50px 0;
     color: #000;
@@ -82,9 +209,13 @@ nav ul li a {
 
 /* Estilos do texto colorido */
 #texto-colorido {
-    background-color: #FF6600;
-    padding: 20px;
-    color: #FFF;
+    background-color: var(--claro);
+    background-image: url('assets/fundo_content2.png');
+    background-repeat:repeat-x;
+    background-position: 5%;
+    padding: 20px;    
+    text-align: center;
+    color:black;
 }
 
 #texto-colorido h2 {
@@ -104,19 +235,30 @@ nav ul li a {
     padding: 10px 20px;
     color: #FFF;
     text-decoration: none;
-    background-color: #FF6600;
+    background-color: var(--abobora);
     border-radius: 5px;
     margin-right: 10px;
 }
 
+ 
 /* Estilos das imagens e descrições */
 .imagem-descricao {
     text-align: center;
+    margin-top: 50px;
     margin-bottom: 20px;
-}
-
+    float: left;
+    width: 48%;
+    padding: 10px;
+ }
+ 
 .imagem-descricao img {
+    margin-top: 2%;
     max-width: 100%;
+    width: 350px;
+    height: 350px;
+    border-radius: 6px;
+    
+    
 }
 
 .imagem-descricao h3 {
@@ -162,17 +304,53 @@ nav ul li a {
 }
 
 /* Estilos do formulário */
-#formulario {
+#contato {
     text-align: center;
     margin-bottom: 20px;
 }
 
-#formulario h2 {
+#contato h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
 /* Estilos do carrossel */
+
+#carousel-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;   
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+#carousel {
+    display: flex;
+    transition: transform 0.5s;
+}
+
+#carousel img {
+    width: 100%;
+    height: auto;
+}
+
+#prev, #next {
+    cursor: pointer;
+    padding: 10px;
+    background-color: var(--amarelo-escuro);  
+    border-radius: 5px;
+    margin: 10px; /* Margem para centralizar os botões */
+    display: inline-block; /* Para centralizar os botões */
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+#prev:hover, #next:hover {
+    background-color: var(--azul)
+}
 #carrossel {
     text-align: center;
     margin-bottom: 20px;
@@ -208,11 +386,110 @@ nav ul li a {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    grid-template-columns: repeat(5, 1fr);
+
     gap: 10px;
 }
 
 .grid-item img {
     max-width: 100%;
     max-height: 200px;
+}
+
+/* Formulario / Contato */
+#contato {    
+padding: 40px;
+text-align: center;
+}
+
+form {
+width: 800px;
+max-width: 100%;
+margin: 0 auto;
+border-radius: 8px;
+
+}
+
+#contato label,
+#contato input,
+#contato textarea,
+#contato button {
+display: block;
+}
+#contato input,
+#contato textarea,
+#contato button {
+    width: 100%;
+    font: inherit;
+    padding: 1.25rem;
+    font-weight: 700;
+    background: var(--azul);
+    border: 0.125rem solid transparent;
+    border-radius: 1.125rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: var(--amarelo);
+    width: 100%;
+    
+}
+
+#contato input:hover,
+#contato input:focus,
+#contato textarea:hover,
+#contato textarea:focus {
+    outline: none;
+    border-color: var(--azul);
+    box-shadow: 0 0 0 0.3125rem var(--amarelo);
+}
+#contato label {
+    margin-top: 1%;
+    margin-bottom: 0.5rem;
+   
+}
+
+#contato textarea {
+    min-height: 12.5rem;
+    resize: vertical;
+    width: 100%;
+}
+
+#contato button {
+    border: none;
+    border-radius: 99px;     
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 6%;
+    background-color: var(--amarelo);
+    width: 100%;    
+    
+}
+
+#contato button:hover,
+#contato button:focus {
+    outline: none;
+    background: var(--amarelo-escuro);
+}
+
+#contato button:disabled {
+    cursor: not-allowed;
+    background: var(--amarelo-escuro);
+}
+
+/* Footer */
+footer {
+display: block;
+padding: 10px;
+width: 100%;
+height: 36px;
+text-align: center;
+background-color: var(--amarelo-escuro);
+position: sticky;
+bottom: 0;
+width: 100%;
+}
+
+footer a {
+list-style: none;
+text-decoration: none;
+
 }
