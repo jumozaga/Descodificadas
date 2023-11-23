@@ -5,8 +5,35 @@
     --abobora: rgb(241,100,50);
     --claro:rgb(243, 242, 234);
     --branco: rgb(255,255,255);
+    --preto: rgb(19, 18, 18);
     
 }
+
+/* Estilos gerais */
+body {
+    font-family:'Vina, Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0; 
+    text-align: center;   
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+.imagem-descricao img{
+    width: 350px;
+    height: 350px;
+    border-radius: 6px;
+}
+a{
+    text-decoration: none;
+    color: var(--preto);
+ 
+}
+
+/* Acessibilidade aos disléxicos */
 @font-face {
     font-family: 'Opendislexy-MonoBold';
     src:        
@@ -38,20 +65,6 @@ span{
     font-size: 6;
 }
 
-/* Estilos gerais */
-body {
-    font-family:'Vina, Courier New', Courier, monospace;
-    margin: 0;
-    padding: 0;    
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    
-}
-
 /* Estilos do cabeçalho */
 menu{
     background-color: var(--amarelo-escuro);
@@ -61,6 +74,8 @@ header{
     padding: 10px;
 }
 
+
+/* Topo */
 .logo img {
     max-width: 100px;
 }
@@ -91,9 +106,14 @@ nav ul li a:hover{
     position: static;
     bottom: 1;
     width: 100%;
-    height: 52px;  
+    height: 96px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: initial;
+    justify-content: space-between;
+    align-items: flex-start;
+       
   }
-  
   
 #menu-toggle:checked ~ .menu-items {
     display: block;
@@ -107,6 +127,7 @@ font-size: 24px;
 line-height: 60px;
 padding: 0 20px;
 cursor: pointer;
+
 }
 
 .menu-items {
@@ -132,6 +153,7 @@ margin-bottom: 10px;
 
 .menu-items ul li a {
 text-decoration: none;
+
 }
 #menu-toggle {
     position: absolute;
@@ -143,67 +165,48 @@ text-decoration: none;
 left: 0px;
 }
 
-.menu-bar ul{
-list-style: none;
-padding: 0;
-display: flex;
-float: right;
-}
 
-.menu-bar li {
-margin: 0 20px;
-
-}
-
-.menu-bar a{
+.menu-bar a:hover{
 text-decoration: none;
+color:  var(--azul);
 }
-/* img{
-    mix-blend-mode: multiply;
-} */
 
-/* Estilos para o carrossel */
-.carousel {
+@media (max-width: 700px) {   
+    .menu-bar, .logo{
+        display: none; /* Oculta o menu por padrão */
+    }
+    .menu-icon {
+        display: block;
+    }
+
+}
+
+@media (min-width: 700px) {
+.menu-bar {
     display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+    justify-content:center;
+    align-content: center;
+    gap:20px; 
 }
-
-.carousel-item {
-    scroll-snap-align: center;
-    flex: 0 0 auto;
-    margin-right: 20px;
-}
-
-/* Estilos para o grid */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
 }
 
 
-/* Efeito de aumento de tamanho das imagens */
-.imagem-descricao img {
-    transition: transform 0.3s ease-in-out;
+/* Footer */
+footer {
+display: block;
+padding: 10px;
+width: 100%;
+height: 36px;
+text-align: center;
+background-color: var(--amarelo-escuro);
+bottom: 0;
+width: 100%;
 }
 
-.imagem-descricao img:hover {
-    transform: scale(1.1);
-}
+footer a {
+list-style: none;
+text-decoration: none;
 
-
-/* Estilos do destaque */
-#destaque {
-    background-color:var(--amarelo-escuro);
-    text-align: center;
-    padding: 50px 0;
-    color: #000;
-}
-
-#destaque h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
 }
 
 /* Estilos do texto colorido */
@@ -217,57 +220,6 @@ text-decoration: none;
     color:black;
 }
 
-#texto-colorido h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-/* Estilos dos botões */
-#botoes {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.botao-interno,
-.botao-externo {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #FFF;
-    text-decoration: none;
-    background-color: var(--abobora);
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
- 
-/* Estilos das imagens e descrições */
-.imagem-descricao {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    float: left;
-    width: 48%;
-    padding: 10px;
- }
- 
-.imagem-descricao img {
-    margin-top: 2%;
-    max-width: 100%;
-    width: 350px;
-    height: 350px;
-    border-radius: 6px;
-    
-    
-}
-
-.imagem-descricao h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.imagem-descricao p {
-    font-size: 14px;
-}
 
 /* Estilos do vídeo */
 #video {
@@ -299,30 +251,54 @@ text-decoration: none;
 .mapa-embed {
     max-width: 100%;
     height: 400px;
-    background-color: #FEDD00;
+    background-color: var(--amarelo);
 }
 
-/* Estilos do formulário */
-#contato {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#contato h2 {
+#texto-colorido h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-/* Estilos do carrossel */
+/* Destaque */
+#destaque{
+    background-color: var(--amarelo-escuro);
+}
 
-#carousel-container {
+/* Configuração da galeria grid */
+.grid-container {
+display: grid;
+/* grid-template-columns: repeat(2, 1fr); */
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+grid-gap: 20px;
+}
+
+.grid-item {
+
+width: 100%;
+
+}
+
+.grid-item img {
+
+width: 100%;
+
+}
+
+@media (max-width: 700px) {
+.grid-container {
+    grid-template-columns: 1fr;
+}
+}
+
+/* Carrossel */
+
+  #carousel-container {
     width: 80%;
     margin: 0 auto;
-    overflow: hidden;   
+    overflow: hidden;
+    background-color: #fff;
     padding: 10px;
     border-radius: 10px;
-    text-align: center;
-    align-items: center;
 }
 
 #carousel {
@@ -338,62 +314,15 @@ text-decoration: none;
 #prev, #next {
     cursor: pointer;
     padding: 10px;
-    background-color: var(--amarelo-escuro);  
+    background-color: rgb(27, 15, 1);
+    color: white;
     border-radius: 5px;
     margin: 10px; /* Margem para centralizar os botões */
     display: inline-block; /* Para centralizar os botões */
-    justify-content: center;
-    align-items: center;
- 
 }
 
 #prev:hover, #next:hover {
-    background-color: var(--azul)
-}
-#carrossel {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#carrossel h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel img {
-    max-width: 100%;
-    max-height: 200px;
-    margin: 0 10px;
-}
-
-/* Estilos do grid */
-#grid {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#grid h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.grid-container {
-    display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
-    grid-template-columns: repeat(5, 1fr);
-
-    gap: 10px;
-}
-
-.grid-item img {
-    max-width: 100%;
-    max-height: 200px;
+    background-color: #ff9900; /* Cor de destaque ao passar o mouse */
 }
 
 /* Formulario / Contato */
@@ -407,6 +336,7 @@ width: 800px;
 max-width: 100%;
 margin: 0 auto;
 border-radius: 8px;
+text-align: center;
 
 }
 
@@ -443,7 +373,7 @@ display: block;
 #contato label {
     margin-top: 1%;
     margin-bottom: 0.5rem;
-   
+    
 }
 
 #contato textarea {
@@ -474,21 +404,18 @@ display: block;
     background: var(--amarelo-escuro);
 }
 
-/* Footer */
-footer {
-display: block;
-padding: 10px;
-width: 100%;
-height: 36px;
-text-align: center;
-background-color: var(--amarelo-escuro);
-position: sticky;
-bottom: 0;
-width: 100%;
+#contato label,
+#contato input,
+#contato textarea {
+display: flex;
+flex-direction: column;
 }
 
-footer a {
-list-style: none;
-text-decoration: none;
-
+@media (min-width: 700px) {
+#contato label,
+#contato input,
+#contato textarea {
+    flex-direction: row;    
 }
+}
+         
